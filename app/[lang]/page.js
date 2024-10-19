@@ -1,4 +1,4 @@
-import { defaultLocale, getDictionary } from '@/lib/i18n';
+import { defaultLocale, getDictionary, languages } from '@/lib/i18n';
 
 import Hero from '@/components/home/hero';
 import Feature from '@/components/home/feature';
@@ -6,6 +6,7 @@ import Pricing from '@/components/home/pricing';
 import Testimonial from '@/components/home/testimonial';
 import Faq from '@/components/home/faq';
 import Cta from '@/components/home/cta';
+
 export default async function Home({ params }) {
 	const langName = params.lang || defaultLocale;
 	const dict = await getDictionary(langName); // 获取内容
@@ -38,4 +39,8 @@ export default async function Home({ params }) {
 			/>
 		</div>
 	);
+}
+
+export async function generateStaticParams() {
+  return languages.map((lang) => ({ lang }))
 }
