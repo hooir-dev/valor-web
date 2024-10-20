@@ -1,0 +1,52 @@
+.valor-first {
+    background: linear-gradient(180deg, #D3E6EE 30%, #F4D1C4 95%);
+}
+
+.valor-first-svg {
+    // 使用动画并且重复往返
+    animation: identifier 1s infinite alternate;
+}
+
+.menu-hover {
+    cursor: pointer;
+
+    div,
+    svg,
+    path,
+    rect {
+        transition: ease-in-out .1s;
+    }
+
+    &:hover {
+
+        div {
+            color: #F3FD65;
+        }
+
+        path,
+        rect {
+            stroke: #F3FD65;
+        }
+    }
+}
+
+.margin-calc {
+    margin-top: calc(100vh - 440px);
+}
+
+@media screen and (max-width: 1050px) {
+    .margin-calc {
+        margin-top: calc(100vh - 750px) !important;
+    }
+}
+
+@keyframes identifier {
+    to {
+
+        transform: translateY(5px);
+    }
+
+    from {
+        transform: translateY(-5px);
+    }
+}
