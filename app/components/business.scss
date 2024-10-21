@@ -3,7 +3,6 @@
 }
 
 .valor-first-svg {
-    // 使用动画并且重复往返
     animation: identifier 1s infinite alternate;
 }
 
@@ -48,5 +47,24 @@
 
     from {
         transform: translateY(-5px);
+    }
+}
+
+#valor-first-active{
+    // backdrop-filter: blur(0);
+    filter: blur(0);
+}
+
+#valor-mission-active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+#valor-ourmiss-active{
+    width: 120px;
+}
+@media screen and (max-width: 950px) {
+    #valor-ourmiss-active {
+        width: 80px !important;
     }
 }
