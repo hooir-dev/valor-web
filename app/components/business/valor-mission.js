@@ -5,7 +5,7 @@ export default function ValorMission() {
     const ref1View = useInView(ref1, { margin: "0px 0px -150px 0px" });
 
     useEffect(() => {
-        ref1.current.id = ref1View && 'valor-mission-active'
+        ref1.current.id = ref1View && 'valor-mission-active';
     }, [ref1View]);
 
     return (

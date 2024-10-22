@@ -63,8 +63,64 @@
 #valor-ourmiss-active{
     width: 120px;
 }
+
+
+#valor-approach-active{
+    letter-spacing: 0;
+    opacity: 1;
+}
+
+#valor-approach-img{
+    background: linear-gradient(to right, #e9e4dd, #ede9e1);
+}
+
+.valor-app-navbox{
+    nav{
+        opacity: 0;
+        transition: ease-out .6s;
+        &:nth-child(1){
+            transform: translateX(70px);
+        }
+        &:nth-child(2){
+            transform: translateX(90px);
+        }
+        &:nth-child(3){
+            transform: translateX(-70px);
+        }
+        &:nth-child(4){
+            transform: translateX(-90px);
+        }
+    }
+}
+
+#valor-app-navbox-active{
+    nav{
+        opacity: 1 !important;
+        transform: translate(0) !important;
+    }
+}
+
+.valor-portf{
+    transition: ease-out .4s;
+    transform: scale(0.9) translateY(30px);
+    opacity: 0;
+}
+
+#valor-portf-active{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
 @media screen and (max-width: 950px) {
     #valor-ourmiss-active {
         width: 80px !important;
     }
+    .valor-app-navbox{
+        nav{
+            &:first-child{
+                margin-top: 24px !important;
+            }
+        }
+    }
 }
+

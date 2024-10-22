@@ -5,6 +5,8 @@ import ValorFirst from "./components/business/valor-first";
 import ValorMission from './components/business/valor-mission';
 import ValorNav3d from './components/business/valor-nav3d';
 import ValorOurmiss from './components/business/valor-ourmiss';
+import ValorApproach from './components/business/valor-approach';
+import ValorPortfolio from './components/business/valor-portfolio';
 export default function Page() {
 	useEffect(() => {
 		const script = document.createElement('script');
@@ -25,7 +27,10 @@ export default function Page() {
 					<ValorNav3d />
 					<ValorOurmiss />
 				</div>
-				2
+				<div className='min-h-[800px] bg-[#F3F7F7] px-[24px] pt-[80px] md:!pt-[0px] pb-[80px] md:!pb-[36px]'>
+					<ValorApproach />
+					<ValorPortfolio />
+				</div>
 			</div>
 		</>
 	)
