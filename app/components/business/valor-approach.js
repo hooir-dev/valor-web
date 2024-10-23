@@ -42,13 +42,14 @@ export default function ValorApproach() {
 
     return (
         <>
-            <div className=''>
+            <div className='px-[24px]'>
                 <nav ref={refTitle} className='text-[#0C2821] text-[60px] font-medium leading-[60px] text-left ml-[24.58%] mt-[72px] -tracking-[16px] opacity-0 ease-out duration-[.6s] md:pt-[32px] md:!ml-0 md:!text-[44px] md:!leading-[52px]'>
                     Our Approach
                 </nav>
                 <div className="mt-[10px]"> <ValorPage num="03" /> </div>
                 <div ref={refImgBox} className='mt-[56px] h-[360px] overflow-hidden rounded-[12px] bg-[#ede8e1] cursor-all-scroll md:!h-[160px]' id='valor-approach-img'>
-                    <MouseParallax parallaxContainerRef={refImgBox} shouldResetPosition lerpEase={0.03} strength={0.12}>
+                    {/* <MouseParallax parallaxContainerRef={refImgBox} shouldResetPosition lerpEase={0.03} strength={0.12}> */}
+                    <MouseParallax parallaxContainerRef={refImgBox} shouldResetPosition lerpEase={0.02} strength={0.09}>
                         <img className='max-w-[1392px] w-full h-full object-cover' src='/img/valor-approach-bg.png' />
                     </MouseParallax>
                 </div>

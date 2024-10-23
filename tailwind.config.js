@@ -14,6 +14,7 @@ module.exports = {
 			'bw': { 'max': '850px' },
 			'nj': { 'max': '950px' },
 			'yw': { 'max': '1130px' },
+			'yq': { 'max': '1000px' },
 			'yl': { 'max': '1050px' },
 			'cw': { 'max': '1216px' },
 			'fi': { 'max': '1440px' },
