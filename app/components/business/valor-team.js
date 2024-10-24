@@ -52,7 +52,7 @@ export default function ValorTeam() {
                 <div className="ball-con mt-[56px] grid grid-cols-3 gap-[24px] md:!mt-[24px] md:!flex md:flex-col">
                     {
                         Array.from(new Array(9)).map((item, idx) => (
-                            <div className={`ball-box min-h-[430px] max-h-[900px] rounded-[12px] bg-[#D9D9D9] relative overflow-hidden grayscale hover:grayscale-0 ease-out duration-300 md:!max-w-[100%] md:w-full md:!h-[468px]`} onClick={() => onItemClick(item)}>
+                            <div key={idx + 'lkj'} className={`ball-box min-h-[430px] max-h-[900px] rounded-[12px] bg-[#D9D9D9] relative overflow-hidden grayscale hover:grayscale-0 ease-out duration-300 md:!max-w-[100%] md:w-full md:!h-[468px]`} onClick={() => onItemClick(item)}>
                                 <div className="absolute bottom-[16px] left-1/2 -translate-x-1/2 w-[90%] h-[76px] p-3 bg-[#f2f2f2] rounded-lg flex-col justify-center items-start inline-flex z-10 md:!h-[89px]">
                                     <div className="text-[#0c2821] text-xl font-medium font-['Neue Haas Grotesk Display Pro'] uppercase leading-7">Rocco</div>
                                     <div className="text-[#0c2821] text-base font-medium font-['Neue Haas Grotesk Display Pro'] leading-normal">Co-Founder & CEO</div>
@@ -70,7 +70,7 @@ export default function ValorTeam() {
 
                                 {/* <img className='absolute top-0 left-0 w-full h-full object-cover' src='https://s21.ax1x.com/2024/10/23/pAdIXh6.png' /> */}
                                 <img className='w-full h-full object-cover' src='/img/vloar-prs.png' />
-                            </div>
+                            </div>  
                         ))
                     }
                 </div>
@@ -123,7 +123,7 @@ export default function ValorTeam() {
                     </section>
                 </div>
                 <div className='mt-[16px] text-[#0C2821] text-[16px] font-medium leading-[24px] overflow-auto' style={{
-                    height:'calc(100% - 40px)'
+                    height: 'calc(100% - 40px)'
                 }}>
                     Rocco co-founded Valor after experiencing firsthand the difficulties project owners face in accessing the carbon markets.
                     <br />
