@@ -5,6 +5,8 @@ import ValorPage from "@/components/common/valor-page";
 export default function ValorPortfolio() {
     const refPortf = useRef(null);
     const refPortfView = useInView(refPortf, { margin: "0px 0px -110px 0px" });
+    const scrollDomRef = useRef(null);
+    const scopreRef = useRef(null);
 
     useEffect(() => {
         refPortf.current.id = refPortfView && 'valor-portf-active';
@@ -14,27 +16,27 @@ export default function ValorPortfolio() {
     let dataLength = 4;
     let scrollIdx = 1;
     let navWidth = 705;
-    let scrollDom = document.querySelector('.valor-portf-scroll');
 
     const goToPrevSlide = () => {
-        if (scrollIdx <= 1) return;
+        if (scrollIdx <= 1 || !scrollDomRef.current) return;
         scrollIdx -= 1;
-        const totletra = (scrollIdx * navWidth) - navWidth;
-        scrollDom.children[0].style['transform'] = `translateX(-${totletra}px)`;
+        const totalTranslate = (scrollIdx * navWidth) - navWidth;
+        scrollDomRef.current.children[0].style.transform = `translateX(-${totalTranslate}px)`;
         handlDomPre();
     };
 
     const goToNextSlide = () => {
-        if (scrollIdx >= 4) return;
-        scrollDom.children[0].style['transform'] = `translateX(-${scrollIdx * navWidth}px)`;
+        if (scrollIdx >= dataLength || !scrollDomRef.current) return;
+        scrollDomRef.current.children[0].style.transform = `translateX(-${scrollIdx * navWidth}px)`;
         scrollIdx += 1;
         handlDomPre();
     };
 
     const handlDomPre = () => {
-        const pres = (scrollIdx / dataLength) * 100;
-        const scopre = document.querySelector('.valor-scopre');
-        scopre.style.width = `${pres}%`
+        const progress = (scrollIdx / dataLength) * 100;
+        if (scopreRef.current) {
+            scopreRef.current.style.width = `${progress}%`;
+        }
     }
 
     return (

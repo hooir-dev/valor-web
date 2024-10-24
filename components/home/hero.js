@@ -6,24 +6,27 @@ import { SiGithub } from 'react-icons/si';
 import { IoDocumentText } from 'react-icons/io5';
 
 import { useEffect, useState } from 'react';
+
 export default function Hero({ locale, CTALocale }) {
 	const [tilt, setTilt] = useState(45);
 	const [duration, setDuration] = useState(0.8);
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const maxTilt = 45; // 最大倾斜角度
-			const scrollY = window.scrollY;
-			const tiltValue = Math.max(maxTilt - scrollY / 8, 0); // 根据滚动值调整
-			setTilt(tiltValue);
-			setDuration(0.3);
-		};
+		if (typeof window !== "undefined") {
+			const handleScroll = () => {
+				const maxTilt = 45; // 最大倾斜角度
+				const scrollY = window.scrollY;
+				const tiltValue = Math.max(maxTilt - scrollY / 8, 0); // 根据滚动值调整
+				setTilt(tiltValue);
+				setDuration(0.3);
+			};
 
-		window.addEventListener('scroll', handleScroll);
+			window.addEventListener('scroll', handleScroll);
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
+			return () => {
+				window.removeEventListener('scroll', handleScroll);
+			};
+		}
 	}, []);
 
 	return (

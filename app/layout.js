@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import './globals.css';
 import './common.scss';
 import ValorHeader from "@/components/common/valor-header";
