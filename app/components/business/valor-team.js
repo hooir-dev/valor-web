@@ -48,7 +48,7 @@ export default function ValorTeam() {
                 <div className="ball-con mt-[56px] grid grid-cols-3 gap-[24px] md:!mt-[24px] md:!flex md:flex-col">
                     {
                         Array.from(new Array(9)).map((item, idx) => (
-                            <div className={`ball-box max-w-[342px] h-[430px] rounded-[12px] bg-[#D9D9D9] relative overflow-hidden grayscale hover:grayscale-0 ease-out duration-300 md:!max-w-[100%] md:w-full md:!h-[468px]`}>
+                            <div key={idx} className={`ball-box max-w-[342px] h-[430px] rounded-[12px] bg-[#D9D9D9] relative overflow-hidden grayscale hover:grayscale-0 ease-out duration-300 md:!max-w-[100%] md:w-full md:!h-[468px]`}>
                                 <div className="absolute bottom-[16px] left-1/2 -translate-x-1/2 w-[90%] h-[76px] p-3 bg-[#f2f2f2] rounded-lg flex-col justify-center items-start inline-flex z-10 md:!h-[89px]">
                                     <div className="text-[#0c2821] text-xl font-medium font-['Neue Haas Grotesk Display Pro'] uppercase leading-7">Rocco</div>
                                     <div className="text-[#0c2821] text-base font-medium font-['Neue Haas Grotesk Display Pro'] leading-normal">Co-Founder & CEO</div>
