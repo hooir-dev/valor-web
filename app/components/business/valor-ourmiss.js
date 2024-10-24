@@ -79,9 +79,11 @@ export default function ValorOurmiss({ num }) {
 
     return (
         <>
-            <div className="mt-[54px] px-[24px] flex justify-between nj:flex-col nj:!mt-[8px]">
-                <nav className="text-[32px] text-left text-[#0C2821] font-medium leading-[40px] nj:mb-[40px]">Our mission is to:</nav>
-                <nav className="ml-[80px] flex-1 nj:ml-0">
+            <div className="mt-[54px] px-[24px] flex justify-between nj:flex-col nj:!mt-[8px] relative md:!px-0">
+                {/* <nav className="text-[32px] text-left text-[#0C2821] font-medium leading-[40px] nj:mb-[40px]">Our mission is to:</nav>
+                <nav className="ml-[80px] flex-1 nj:ml-0"> */}
+                <nav className="text-[32px] text-left text-[#0C2821] font-medium leading-[40px] nj:mb-[40px] absolute pos-initail">Our mission is to:</nav>
+                <nav className="ml-[24.3%] flex-1 nj:ml-0">
                     {
                         dataList.map((x, i) => (
                             <div key={i + 'lkj'} ref={listObj['list' + (i + 1)]} className="flex flex-1 cursor-pointer border-b border-[rgba(12, 40, 33, 0.08)] pb-[24px] mb-[24px] last:pb-0 last:border-none last:mb-0 nj:flex-col">

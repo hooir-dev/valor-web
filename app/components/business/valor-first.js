@@ -15,7 +15,8 @@ export default function ValorFirst() {
             <div className="valor-first relative min-h-[100vh] md:min-h-min md:h-[542px] overflow-y-hidden md:px-[16px]">
                 <img ref={ref1} className="blur-[12px] ease-out duration-[1s] absolute -bottom-[67px] left-0 w-full object-cover h-[436px] fa:h-auto md:h-[192px] md:bottom-0" src="/img/valor-first-banner.png" />
                 {/* whitespace-nowrap */}
-                <div className="max-w-[680px] mx-auto pt-[120px] md:pt-[80px] sc:!pt-[60px] box-border fa:max-w-[47%] md:max-w-[100%]">
+                {/* <div className="max-w-[680px] mx-auto pt-[120px] md:pt-[80px] sc:!pt-[60px] box-border fa:max-w-[47%] md:max-w-[100%]"> */}
+                <div className="max-w-[680px] mx-auto pt-[120px] md:pt-[80px] sc:!pt-[60px] box-border md:max-w-[100%]">
                     <nav className="">
                         <WordFadeIn delay={0.25} words="Your Partner for Unlocking Climate Finance" className="!text-[#0C2821] text-[60px] font-medium leading-[60px] md:!leading-[52px] md:!text-[44px] !text-left" />
                     </nav>
