@@ -15,11 +15,19 @@ export default function ValorHeader() {
         setOpenMenu(!openMenu);
     }
 
-    const handleScroll = () => {
-        window.scrollY > 10 ? setScrollMenu(true) : setScrollMenu(false);
-    };
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const handleScroll = () => {
+                window.scrollY > 10 ? setScrollMenu(true) : setScrollMenu(false);
+            };
 
-    window.addEventListener("scroll", handleScroll);
+            window.addEventListener("scroll", handleScroll);
+
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
+        }
+    }, []);
 
     return (
         <>
@@ -41,13 +49,13 @@ export default function ValorHeader() {
                 </div>
 
                 <div className={`ease-in duration-300 delay-75 absolute -top-[100vh] opacity-90 left-0 w-full h-[100vh] bg-[#0C2821] ${openMenu && '!top-0 !opacity-100'}`}>
-                {/* yl:mt-[86px] */}
+                    {/* yl:mt-[86px] */}
                     <nav className='mt-[111px] yl:mt-[50px] px-[24px] flex justify-between yl:flex-col'>
                         <nav>
                             <div className="h-[632px] py-6 flex-col justify-start items-start gap-4 inline-flex whitespace-nowrap yl:h-[272px] yl:!gap-2">
                                 {
                                     menuList.map((x, i) => (
-                                        <div key={i+'lsdf'} className="w-[506px] justify-start items-center gap-2 inline-flex group cursor-pointer">
+                                        <div key={i + 'lsdf'} className="w-[506px] justify-start items-center gap-2 inline-flex group cursor-pointer">
                                             <div className="w-24 h-24 yl:hidden ease-in-out duration-300 justify-center items-center flex -ml-[110px] opacity-0 group-hover:ml-0 group-hover:opacity-100">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
                                                     <path d="M76 48H20" stroke="#F3FD65" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
