@@ -50,7 +50,8 @@ export default function ValorApproach() {
                 <div ref={refImgBox} className='mt-[56px] h-[360px] overflow-hidden rounded-[12px] bg-[#ede8e1] cursor-all-scroll md:!h-[160px]' id='valor-approach-img'>
                     {/* <MouseParallax parallaxContainerRef={refImgBox} shouldResetPosition lerpEase={0.03} strength={0.12}> */}
                     <MouseParallax parallaxContainerRef={refImgBox} shouldResetPosition lerpEase={0.02} strength={0.09}>
-                        <img className='max-w-[1392px] w-full h-full object-cover' src='/img/valor-approach-bg.png' />
+                    {/* max-w-[1392px]  */}
+                        <img className='w-full h-full object-cover' src='/img/valor-approach-bg.png' />
                     </MouseParallax>
                 </div>
                 <div className="mt-[48px] flex valor-app-navbox nj:flex-col nj:border-l nj:border-[#E1E6E6] nj:!mt-[24px] overflow-hidden" ref={refNavbox}>
